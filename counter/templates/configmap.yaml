@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: counter
+  namespace: default
+data:
+  DB_HOST: "{{- .Values.database.host }}"
+  DB_USER: "{{- .Values.database.user }}"
+  DB_PASSWORD: "{{- .Values.database.password }}"
+  DB_NAME: "{{- .Values.database.name }}"
